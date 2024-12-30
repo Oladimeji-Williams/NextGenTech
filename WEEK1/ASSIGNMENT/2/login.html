@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ellipsis login</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="card-top">
+                <div class="form-header">
+                    <img src="ellipsis_logo.png" alt="ellipsis logo">
+                    <h1>Login</h1>
+                </div>
+                <div class="form-body">
+                    <form action="">
+                        <input type="text" class="form-control" placeholder="Firstname">
+                        <input type="text" class="form-control" placeholder="Middlename">
+                        <input type="text" class="form-control" placeholder="Lastname">
+                        <input type="number" class="form-control" placeholder="Age">
+                        <input type="text" class="form-control" placeholder="School">
+                        <input type="text" class="form-control" placeholder="Occupation">
+                        <input type="email" class="form-control" placeholder="Email Address">
+                        <input type="password" class="form-control" placeholder="Password" id="passwordField">
+                        <div>
+                            <input type="checkbox" class="form-check-input" id="showPassword">
+                            <label for="showPassword" class="form-check-input">Show Password</label>
+                        </div>
+                        <input type="password" class="form-control" placeholder="Confirm Password" id="confirmPasswordField">
+                        <div>
+                            <input type="checkbox" class="form-check-input" id="showConfirmPassword">
+                            <label for="showConfirmPassword" class="form-check-input">Show Confirm Password</label>
+                        </div>
+                        <p id="incorrectPassword"></p>
+                    </form>
+                    <button type="submit" class="login-button">Register</button>
+                </div>
+            </div>
+            <div class="card-bottom">
+                <span>New User? <a href="#">Sign Up</a></span>
+                <a href="#">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

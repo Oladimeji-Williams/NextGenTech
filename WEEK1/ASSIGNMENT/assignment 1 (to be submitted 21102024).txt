@@ -1,0 +1,5 @@
+1. create an html page that takes an input of email address andpassword of users with a login button.
+2. create an html page that takes an input of first name, last name, middle name, age, school, occupation, email address, password, and confirm password, with a register button.
+3. create a 3-page static website (home, about, contact) using html.
+
+NB: use any collor or design that pleases your soul

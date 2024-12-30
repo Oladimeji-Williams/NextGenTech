@@ -1,0 +1,89 @@
+body, html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #7b00ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    height: 40px;
+    width: 40px;
+}
+
+.login-container{
+    display: flex;
+    width: 25%;
+    height: 90%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+#passwordField{
+    margin-top: 20px;
+}
+
+.login-card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    padding: 40px;
+    background: whitesmoke;
+    padding: 40px;
+    color: #007bff;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    height: 70%;
+}
+.form-control{
+    height:30px;
+    margin-bottom: 0.2%;
+    border-radius: 5px;
+}
+
+.form-body{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    height: 70%;
+    color: #a9a9a9; 
+}
+
+
+.card-bottom{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #a9a9a9; 
+}
+.card-bottom a{
+    color: #007bff;
+    text-decoration: none;
+}
+.card-bottom a:hover{
+    text-decoration: underline;
+}
+.login-button{
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    margin-top: 10px;
+    height: 60px;
+}
+.login-button:hover{
+    background-color: #0056b3;
+}
+.login-left footer {
+    position: absolute;
+    bottom: 20px;
+    font-size: 0.9rem;
+}

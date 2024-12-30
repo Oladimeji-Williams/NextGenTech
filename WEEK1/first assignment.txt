@@ -1,0 +1,11 @@
+difference between relative path and an absolute path
+
+A relative path describes the location of a file relative to the current (working) directory.
+An absolute path describes the location from the root directory
+
+example
+relative path:
+.\Downloads\_MVhERr7SV6CoY7-Ho_hGw_8facf0ef2ecd4cb58588f987268fc9e1_C7M2L1-Item-4---Start-project
+
+absolute path:
+C:\Users\olawilliams\Downloads\_MVhERr7SV6CoY7-Ho_hGw_8facf0ef2ecd4cb58588f987268fc9e1_C7M2L1-Item-4---Start-project

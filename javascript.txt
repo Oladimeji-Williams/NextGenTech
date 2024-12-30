@@ -1,0 +1,21 @@
+heap and stack
+
+naming convention in javascript
+
+_ and $ are the only symbols allowed as initial parts of naming variables in javascript
+
+number should not begin variable naming
+
+no white spaces allowed in variable naming
+
+don't use keywords in variable naming
+
+variable names should be descriptive
+
+javascript is case sensitive
+
+use camelCase for variable naming
+use PascalCase for function naming
+
+use cabal-case in CSS
+use snake_case in python

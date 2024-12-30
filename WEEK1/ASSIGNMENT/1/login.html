@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ellipsis login</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-left">
+            <div class="card-top">
+                <img src="ellipsis_logo.png" alt="ellipsis logo">
+                <h1>Welcome to <em>ellipsis</em></h1>
+            </div>
+            <div class="card-bottom">
+                <span>this is nice</span>
+            </div>
+        </div>
+        
+        <div class="login-right">
+            <div class="card-top">
+                <div class="form-header">
+                    <img src="ellipsis_logo.png" alt="ellipsis logo">
+                    <h1>Login</h1>
+                </div>
+                <div class="form-body">
+                    <form action="">
+                        <input type="text" class="form-control" placeholder="Username">
+                        <input type="password" class="form-control" placeholder="Password" id="passwordField">
+                        <div>
+                            <input type="checkbox" class="form-check-input" id="showPassword"> <!-- Call function here -->
+                            <label for="showPassword" class="form-check-input">Show Password</label>
+                        </div>
+                    </form>
+                    <button type="submit" class="login-button">LOGIN</button>
+                </div>
+            </div>
+            <div class="card-bottom">
+                <span>New User? <a href="#">Sign Up</a></span>
+                <a href="#">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

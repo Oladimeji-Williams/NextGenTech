@@ -1,0 +1,158 @@
+body{
+    position: -webkit-sticky;
+    position: sticky;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(33, 33, 33, 1);
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 15px;
+}
+div{
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    width: 100%;
+}
+nav{
+    padding: 0;
+    overflow: hidden;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+}
+nav span button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    font-weight:400;
+    border: none;
+    color: white;
+}
+nav span:not(:last-child) {
+    float: left;
+    margin-right: 5px;
+}
+nav span:last-child{
+    float: right;   
+}
+nav span:last-child img {
+    border-radius: 15px; /* Applies the rounded corners */
+}
+footer span{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    font-size: smaller;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+footer span:last-child{
+    right: 10px;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    border-radius: 25px;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+
+.options{
+    flex-direction: row;
+    width: 100%;
+    margin-top: 1%;
+    justify-content: center;
+}
+
+.options > ul {
+    display: flex; /* Use flexbox for the ul to arrange items in a row */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 0; /* Remove default padding */
+}
+.options > ul > li{
+    list-style-type: none;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0);
+    align-items: center;
+    height: 40px;
+}
+
+.options > ul > li > button{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.5);
+    min-width: 70px;
+    border-radius: 25px;
+    background-color: transparent
+    padding-right: 10px;
+    padding: 10px 10px;
+    white-space: nowrap;
+    height: 100%;
+    margin-right: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);;
+}
+button{
+    background-color: rgba(0, 0, 0, 0);
+}
+.options > ul > li > button svg{
+    margin-right: 10px;
+}
+
+.options > ul > li > button:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.content{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 90vh;
+    width: 100%;
+}
+
+.content > span {
+    display: flex; /* Change to flexbox for horizontal alignment */
+    align-items: center; /* Align items vertically center */
+    justify-content: space-between;
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    height:50px;
+}
+.content > span > svg:first-child{
+    margin-left: 10px;
+}
+#lastSVG{
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.3);;
+}
+#lastSVG.active{
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 1);;
+}
+#lastSVG.active:hover{
+    color: rgba(255, 255, 255, 0.85);;
+}
+form {
+    margin: 0; /* Remove default margin from form */
+    width: 85%;
+    height: 90%;
+}
+
+form input {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border: none; /* Remove border at all times */
+    box-shadow: none; /* Remove any shadow */
+    color: white;
+    outline: none; /* Remove the default outline on focus */
+}
