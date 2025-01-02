@@ -48,6 +48,15 @@
 .display .percent{
   color: #F55536;
 }
+.bottom{
+  background-color: #37000A;
+  color: rgba(256, 256, 256, 0.3);
+}
+.bottom span{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
 .keys{
   background-color: #37000A;
   padding: 1.5rem;
