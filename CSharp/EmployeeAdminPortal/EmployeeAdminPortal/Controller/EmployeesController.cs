@@ -8,20 +8,20 @@ namespace EmployeeAdminPortal.Controllers{
     [Route("api/[controller]")]
     [ApiController]
     public class EmployeesController: ControllerBase{
-        private readonly ApplicationDbContext dbContext;
+        private readonly ApplicationDbContext _dbContext;
         public EmployeesController(ApplicationDbContext dbContext)
         {
-            this.dbContext = dbContext;
+            _dbContext = dbContext;
         }
         [HttpGet]
         public IActionResult GetAllEmployees(){
-            return Ok(dbContext.Employees.ToList());
+            return Ok(_dbContext.Employees.ToList());
         }
 
         [HttpGet]
         [Route("{id:guid}")]
         public IActionResult GetEmployeeId(Guid id){
-            var employee = dbContext.Employees.Find(id);
+            var employee = _dbContext.Employees.Find(id);
             if (employee is null){
                 return NotFound();
             } else{
@@ -30,7 +30,7 @@ namespace EmployeeAdminPortal.Controllers{
 
         }
 
-        [HttpPost]
+        [HttpPost]  
         public IActionResult AddEmployees(AddEmployeesDto addEmployeesDto){
             var employeeEntity = new Employee(){
                 Name = addEmployeesDto.Name,
@@ -38,14 +38,14 @@ namespace EmployeeAdminPortal.Controllers{
                 PhoneNumber = addEmployeesDto.PhoneNumber,
                 Salary = addEmployeesDto.Salary
             };
-            dbContext.Employees.Add(employeeEntity);
-            dbContext.SaveChanges();
+            _dbContext.Employees.Add(employeeEntity);
+            _dbContext.SaveChanges();
             return Ok(employeeEntity);
         }
         [HttpPut]
         [Route("{id:guid}")]
         public IActionResult UpdateEmployee(Guid id, UpdateEmployeeDto updateEmployeeDto){
-            var employee = dbContext.Employees.Find(id);
+            var employee = _dbContext.Employees.Find(id);
             if(employee is null){
                 return NotFound();
             } else{
@@ -53,7 +53,7 @@ namespace EmployeeAdminPortal.Controllers{
                 employee.Email = updateEmployeeDto.Email;
                 employee.PhoneNumber = updateEmployeeDto.PhoneNumber;
                 employee.Salary = updateEmployeeDto.Salary;
-                dbContext.SaveChanges();
+                _dbContext.SaveChanges();
                 return Ok(employee);
             }
         }
@@ -61,12 +61,12 @@ namespace EmployeeAdminPortal.Controllers{
         [HttpDelete]
         [Route("{id:guid}")]
         public IActionResult DeleteEmployee(Guid id){
-            var employee = dbContext.Employees.Find(id);
+            var employee = _dbContext.Employees.Find(id);
             if(employee is null){
                 return NotFound();
             } else{
-                dbContext.Employees.Remove(employee);
-                dbContext.SaveChanges();
+                _dbContext.Employees.Remove(employee);
+                _dbContext.SaveChanges();
                 return Ok();
             }
         }
