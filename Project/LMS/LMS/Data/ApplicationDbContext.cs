@@ -19,35 +19,38 @@ namespace LMS.Data{
             modelBuilder.Entity<Enrollment>()
                 .HasOne(e => e.User)
                 .WithMany(e => e.Enrollments)
-                .HasForeignKey(e => e.UserID);
-            
+                .HasForeignKey(e => e.UserID)
+                .OnDelete(DeleteBehavior.Cascade);
+
             modelBuilder.Entity<Enrollment>()
                 .HasOne(e => e.Course)
                 .WithMany(e => e.Enrollments)
-                .HasForeignKey(e => e.CourseID);
+                .HasForeignKey(e => e.CourseID)
+                .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Lesson>()
                 .HasOne(e => e.Course)
                 .WithMany(e => e.Lessons)
-                .HasForeignKey(e => e.CourseID);
-            // base.OnModelCreating(modelBuilder);
+                .HasForeignKey(e => e.CourseID)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Progress>()
+                .HasOne(p => p.User)
+                .WithMany()
+                .HasForeignKey(p => p.UserID)
+                .OnDelete(DeleteBehavior.Restrict);  // Prevents cascading delete
+
+            modelBuilder.Entity<Progress>()
+                .HasOne(p => p.Course)
+                .WithMany()
+                .HasForeignKey(p => p.CourseID)
+                .OnDelete(DeleteBehavior.Restrict);  // Prevents cascading delete
+
+            modelBuilder.Entity<Progress>()
+                .HasOne(p => p.Lesson)
+                .WithMany()
+                .HasForeignKey(p => p.LessonID)
+                .OnDelete(DeleteBehavior.Cascade); // Allow only one cascade delete
         }
-    // protected override void OnModelCreating(ModelBuilder modelBuilder)
-    // {
-    //     modelBuilder.Entity<User>().HasData(
-    //         new User { UserID = 1, FirstName = "John", LastName = "Doe", Email = "john@example.com" },
-    //         new User { UserID = 2, FirstName = "Jane", LastName = "Smith", Email = "jane@example.com" }
-    //     );
-
-    //     modelBuilder.Entity<Course>().HasData(
-    //         new Course { CourseID = 1, Title = "React for Beginners", Description = "Learn React from scratch!" }
-    //     );
-
-    //     modelBuilder.Entity<Lesson>().HasData(
-    //         new Lesson { LessonID = 1, Title = "Introduction to React", CourseID = 1 },
-    //         new Lesson { LessonID = 2, Title = "React Components", CourseID = 1 }
-    //     );
-    // }
-
     }
 }

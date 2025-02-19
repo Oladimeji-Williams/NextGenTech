@@ -1,5 +1,5 @@
 using LMS.Data;
-using LMS.Models;
+using LMS.Models.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

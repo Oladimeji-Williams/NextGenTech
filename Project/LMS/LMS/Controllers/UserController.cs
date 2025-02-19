@@ -1,5 +1,5 @@
 using LMS.Data;
-using LMS.Models;
+using LMS.Models.Dtos;
 using LMS.Utilities;
 using LMS.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -20,7 +20,6 @@ public class UserController: ControllerBase
     public async Task<ActionResult<List<UserDto>>> GetUsers()
     {
         var users = await _context.Users.Select(user => new UserDto{
-            UserID = user.UserID,
             FirstName = user.FirstName,
             LastName = user.LastName,
             Email = user.Email
